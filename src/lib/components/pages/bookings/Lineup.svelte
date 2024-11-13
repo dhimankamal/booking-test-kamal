@@ -16,6 +16,10 @@
   import { PoitionsColor } from "$lib/utils/utils";
   import InvitedIcon from "$lib/assets/icons/invited.svg";
   import Confirmed from "$lib/assets/icons/confirm.svg";
+    import TableActionRow from "./TableActionRow.svelte";
+
+    import PlusIcon from "$lib/assets/icons/plus.svg";
+
 
 
 
@@ -98,7 +102,12 @@
   </div>
 
   <Table hoverable={true} {items}>
-    <TableHead class=" bg-BG-Secondary text-sm font-normal text-Text-Tartiary">
+    <tfoot>
+      <tr class="">
+        <TableActionRow />
+      </tr>
+  </tfoot>
+<TableHead class=" bg-BG-Secondary text-sm font-normal text-Text-Tartiary">
       <TableHeadCell class="py-6 rounded-tl-lg capitalize font-normal"
         >Performer</TableHeadCell
       >
@@ -156,4 +165,7 @@
       </TableBodyRow>
     </TableBody>
   </Table>
+  <button class="border border-[#D4D6D9] px-3 py-2 rounded-[8px] font-[14px] text-[#0284FE] flex gap-2 !m-0">
+    <img src={PlusIcon} alt=""/>
+    New spot</button>
 </section>

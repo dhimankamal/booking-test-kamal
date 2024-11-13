@@ -1,6 +1,6 @@
 <script>
   import DeclinedIcon from "$lib/assets/svg/declined.svg";
-  import StatusDeclined from "$lib/assets/icons/declined.svg";
+  import ConfirmIcon from "$lib/assets/icons/confirm.svg";
   import {
     Table,
     TableBody,
@@ -20,13 +20,26 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "declined",
+      status: "confirmed",
       position: "HOST",
       set: "10",
       note: "Can I go up early?",
       id: 1,
     },
+    {
+      performer: {
+        image: "/images/avatar.png",
+        name: "Dana Gould",
+      },
+      status: "confirmed",
+      position: "HOST",
+      set: "10",
+      note: "Can I go up early?",
+      id: 2,
+    },
   ];
+
+
 </script>
 
 <section class=" space-y-6">
@@ -65,7 +78,7 @@
         <span class="sr-only">Notes</span>
       </TableHeadCell>
     </TableHead>
-    <TableBody tableBodyClass=" border-BG-Secondary">
+    <TableBody tableBodyClass=" border-BG-Secondary ">
       <TableBodyRow slot="row" let:item>
         <TableBodyCell class=" max-w-48">
           <div class="flex items-center gap-4 w-full">
@@ -77,7 +90,7 @@
           </div>
         </TableBodyCell>
         <TableBodyCell
-          ><Badge size="medium" icon={StatusDeclined} status={item.status}>{item.status}</Badge
+          ><Badge size="medium" icon={ConfirmIcon} status={item.status}>{item.status}</Badge
           ></TableBodyCell
         >
         <TableBodyCell
@@ -90,6 +103,8 @@
           <button
             class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"
             data-popover-target={`popover-no-arrow-${item.id}`}
+            data-popover-placement="right"
+            data-popover-trigger="click"
           >
             <img src={MoreIcon} alt="more-actions" class="" />
           </button>

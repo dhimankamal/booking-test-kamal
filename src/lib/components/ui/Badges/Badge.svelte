@@ -26,9 +26,9 @@
       case "small":
         return "px-[2px] text-[7px] leading-[7px] rounded-[4px] font-medium";
       case "medium":
-        return "px-2 py-1 text-[10px] leading-[14px] font-semibold rounded-[6px]";
+        return "px-2 py-1 text-[12px] leading-[14px] font-semibold rounded-[6px]";
       case "large":
-        return "px-[15.5px] py-[6px] text-sm leading-[14px] font-medium rounded-[6px]";
+        return "px-[15.5px] py-[6px] text-[14px] leading-[14px] font-medium rounded-[6px]";
       default:
         return "";
     }
@@ -190,7 +190,9 @@
         <img src={CancelIcon} alt="Dismissible Icon here" />
       </button>
     {/if}
-    <slot />
+    <span class="captilize">
+      <slot />
+    </span>
   </div>
 {/if}
 
