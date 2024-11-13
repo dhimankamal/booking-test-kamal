@@ -1,7 +1,5 @@
 <script>
-  import { Dropdown, DropdownItem } from "flowbite-svelte";
-  import Button from "$lib/components/ui/Button/Button.svelte";
-  import DropdownIcon from "$lib/assets/svg/chevron-down.svg";
+
   import DeclinedIcon from "$lib/assets/svg/declined.svg";
   import {
     Table,
@@ -35,16 +33,11 @@
       <img src={DeclinedIcon} alt="Before Icon here" class="mr-2" />
       <h3 class="text-2xl text-Text-Tartiary">Declined</h3>
     </div>
-  
-    <Button className="w-full md:w-auto" strokebtn={true} afterIcon={DropdownIcon}
-      >Action</Button
-    >
-    <Dropdown>
-      <DropdownItem>Update</DropdownItem>
-      <DropdownItem>Add</DropdownItem>
-    </Dropdown>
+
+    
+   
   </div>
-  
+
   <Table hoverable={true} {items}>
     <TableHead class=" bg-BG-Secondary text-sm font-normal text-Text-Tartiary">
       <TableHeadCell class="py-6 rounded-tl-lg capitalize font-normal"
@@ -104,6 +97,4 @@
       </TableBodyRow>
     </TableBody>
   </Table>
-  
 </section>
-

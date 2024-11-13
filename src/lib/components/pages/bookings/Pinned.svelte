@@ -29,9 +29,6 @@
   ];
 </script>
 
-
-
-
 <section class=" space-y-6">
   <div class="flex justify-between items-center">
     <div class=" flex items-center">
