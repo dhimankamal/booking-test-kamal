@@ -3,6 +3,7 @@
   import Button from "$lib/components/ui/Button/Button.svelte";
   import DropdownIcon from "$lib/assets/svg/chevron-down.svg";
   import ProfileIcon from "$lib/assets/svg/profile.svg";
+  import CustomPopover from "$lib/components/ui/Popover/CustomPopover.svelte";
   import {
     Table,
     TableBody,
@@ -16,12 +17,9 @@
   import { PoitionsColor } from "$lib/utils/utils";
   import InvitedIcon from "$lib/assets/icons/invited.svg";
   import Confirmed from "$lib/assets/icons/confirm.svg";
-    import TableActionRow from "./TableActionRow.svelte";
+  import TableActionRow from "./TableActionRow.svelte";
 
-    import PlusIcon from "$lib/assets/icons/plus.svg";
-
-
-
+  import PlusIcon from "$lib/assets/icons/plus.svg";
 
   let items = [
     {
@@ -29,56 +27,60 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",icon: Confirmed,
+      status: "confirmed",
+      icon: Confirmed,
       position: "HOST",
       set: "10",
       note: "Can I go up early?",
-      id: 1,
+      id: 100,
     },
     {
       performer: {
         image: "/images/avatar.png",
-        name: "Dana Gould",
+        name: "Natasha Pearl Hansen and Her Very Long Name",
       },
       icon: InvitedIcon,
-      status:"invited",
+      status: "invited",
       position: "HOST",
       set: "10",
       note: "Can I go up early?",
-      id: 2,
+      id: 200,
     },
     {
       performer: {
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",icon: Confirmed,
+      status: "confirmed",
+      icon: Confirmed,
       position: "HEADLINER",
       set: "10",
       note: "Can I go up early?",
-      id: 3,
+      id: 300,
     },
     {
       performer: {
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",icon: Confirmed,
+      status: "confirmed",
+      icon: Confirmed,
       position: "GUEST",
       set: "10",
       note: "Can I go up early?",
-      id: 4,
+      id: 400,
     },
     {
       performer: {
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",icon: Confirmed,
+      status: "confirmed",
+      icon: Confirmed,
       position: "FEATURE",
       set: "10",
       note: "Can I go up early?",
-      id: 5,
+      id: 500,
     },
   ];
 </script>
@@ -106,8 +108,8 @@
       <tr class="">
         <TableActionRow />
       </tr>
-  </tfoot>
-<TableHead class=" bg-BG-Secondary text-sm font-normal text-Text-Tartiary">
+    </tfoot>
+    <TableHead class=" bg-BG-Secondary text-sm font-normal text-Text-Tartiary">
       <TableHeadCell class="py-6 rounded-tl-lg capitalize font-normal"
         >Performer</TableHeadCell
       >
@@ -140,32 +142,57 @@
           <div class="flex items-center gap-4 w-full">
             <span class="text-Text-Tartiary">::</span>
             <img src={item.performer.image} alt="" />
-            <p class=" overflow-hidden whitespace-pre-wrap text-sm">
+            <p class=" overflow-hidden whitespace-pre-wrap text-sm font-normal">
               {item.performer.name}
             </p>
           </div>
         </TableBodyCell>
         <TableBodyCell
-          ><Badge size="medium" icon={item.icon}  status={item.status}>{item.status}</Badge
+          ><Badge size="medium" icon={item.icon} status={item.status}
+            >{item.status}</Badge
           ></TableBodyCell
         >
         <TableBodyCell
-          ><Badge size="large" bgColor={PoitionsColor[item.position].bgColor} textColor="#FFFFFF">{item.position}</Badge
+          ><Badge
+            size="large"
+            bgColor={PoitionsColor[item.position].bgColor}
+            textColor="#FFFFFF">{item.position}</Badge
           ></TableBodyCell
         >
-        <TableBodyCell>{item.set}</TableBodyCell>
-        <TableBodyCell>{item.note}</TableBodyCell>
+        <TableBodyCell class="font-normal">{item.set}</TableBodyCell>
+        <TableBodyCell class="font-normal">{item.note}</TableBodyCell>
         <TableBodyCell class=" flex items-end justify-end">
           <button
             class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"
+            data-popover-target={`popover-no-arrow-${item.id}`}
+            data-popover-placement="right"
+            data-popover-trigger="click"
           >
             <img src={MoreIcon} alt="more-actions" class="" />
           </button>
+
+          <CustomPopover id={`popover-no-arrow-${item.id}`}>
+            <div class="flex flex-col gap-2 text-Tartiary text-sm">
+              <button
+                class=" text-left hover:bg-BG-Secondary p-1 font-normal rounded-md text-sm text-Text-Tartiary hover:text-Text-Primary"
+                >Message performer</button
+              >
+              <button
+                class=" text-left hover:bg-BG-Secondary p-1 font-normal rounded-md text-sm text-Text-Tartiary hover:text-Text-Primary"
+                >View invitation history</button
+              >
+              <button
+                class=" text-left hover:bg-BG-Secondary p-1 font-normal rounded-md text-sm text-Text-Tartiary hover:text-Text-Primary"
+                >Display on event page <span class=" text-brand-Primary">✓</span
+                >
+              </button>
+            </div>
+          </CustomPopover>
         </TableBodyCell>
       </TableBodyRow>
     </TableBody>
   </Table>
-  <button class="border border-[#D4D6D9] px-3 py-2 rounded-[8px] font-[14px] text-[#0284FE] flex gap-2 !m-0">
-    <img src={PlusIcon} alt=""/>
-    New spot</button>
+  <Button strokebtn={true} beforeIcon={PlusIcon} className="!text-brand-Primary"
+    >New spot</Button
+  >
 </section>

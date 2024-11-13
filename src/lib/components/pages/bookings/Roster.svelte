@@ -62,6 +62,7 @@
       strokebtn={true}
       data-popover-target={`popover-no-arrow-30`}
       beforeIcon={FilterIcon}
+      data-popover-placement="bottom"
       className="!text-brand-Primary">Filter</Button
     >
   </div>
@@ -114,13 +115,9 @@
   </Table>
 </section>
 
-<!-- <button
-  class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"
-  data-popover-target={`popover-no-arrow-30`}
->
-  <img src={MoreIcon} alt="more-actions" class="" />
-</button> -->
 
 <CustomPopover id={`popover-no-arrow-30`} class="w-96 flex">
   <Filters />
 </CustomPopover>
+
+<div class="h-96"></div>

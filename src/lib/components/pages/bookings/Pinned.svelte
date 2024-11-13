@@ -37,16 +37,17 @@
       <img src={PinnedIcon} alt="Before Icon here" class="mr-2" />
       <h3 class="text-2xl text-Text-Tartiary">Pinned</h3>
     </div>
-
-    <Button
-      className="w-full md:w-auto"
-      strokebtn={true}
-      afterIcon={DropdownIcon}>Action</Button
-    >
-    <Dropdown>
-      <DropdownItem>Update</DropdownItem>
-      <DropdownItem>Add</DropdownItem>
-    </Dropdown>
+    <div>
+      <Button
+        className="w-full md:w-auto"
+        strokebtn={true}
+        afterIcon={DropdownIcon}>Action</Button
+      >
+      <Dropdown>
+        <DropdownItem>Update</DropdownItem>
+        <DropdownItem>Add</DropdownItem>
+      </Dropdown>
+    </div>
   </div>
 
   <Table hoverable={true} {items}>
@@ -89,15 +90,19 @@
           </div>
         </TableBodyCell>
         <TableBodyCell
-          ><Badge size="medium" icon={Statuspinned} status={item.status}>{item.status}</Badge
+          ><Badge size="medium" icon={Statuspinned} status={item.status}
+            >{item.status}</Badge
           ></TableBodyCell
         >
-        <TableBodyCell
-          ><Badge size="large" bgColor={PoitionsColor[item.position].bgColor} textColor="#FFFFFF">{item.position}</Badge
+        <TableBodyCell class="opacity-30"
+          ><Badge
+            size="large"
+            bgColor={PoitionsColor[item.position].bgColor}
+            textColor="#FFFFFF">{item.position}</Badge
           ></TableBodyCell
         >
-        <TableBodyCell>{item.set}</TableBodyCell>
-        <TableBodyCell>{item.note}</TableBodyCell>
+        <TableBodyCell class="opacity-30">{item.set}</TableBodyCell>
+        <TableBodyCell class="opacity-30">{item.note}</TableBodyCell>
         <TableBodyCell class=" flex items-end justify-end">
           <button
             class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"

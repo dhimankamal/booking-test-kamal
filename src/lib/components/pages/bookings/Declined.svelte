@@ -38,8 +38,6 @@
       id: 2,
     },
   ];
-
-
 </script>
 
 <section class=" space-y-6">
@@ -90,15 +88,19 @@
           </div>
         </TableBodyCell>
         <TableBodyCell
-          ><Badge size="medium" icon={ConfirmIcon} status={item.status}>{item.status}</Badge
+          ><Badge size="medium" icon={ConfirmIcon} status={item.status}
+            >{item.status}</Badge
           ></TableBodyCell
         >
-        <TableBodyCell
-          ><Badge size="large" bgColor={PoitionsColor[item.position].bgColor} textColor="#FFFFFF">{item.position}</Badge
+        <TableBodyCell class="opacity-30"
+          ><Badge
+            size="large"
+            bgColor={PoitionsColor[item.position].bgColor}
+            textColor="#FFFFFF">{item.position}</Badge
           ></TableBodyCell
         >
-        <TableBodyCell>{item.set}</TableBodyCell>
-        <TableBodyCell>{item.note}</TableBodyCell>
+        <TableBodyCell class="opacity-30">{item.set}</TableBodyCell>
+        <TableBodyCell class="opacity-30">{item.note}</TableBodyCell>
         <TableBodyCell class=" flex items-end justify-end">
           <button
             class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"
@@ -111,8 +113,14 @@
 
           <CustomPopover id={`popover-no-arrow-${item.id}`}>
             <div class="flex flex-col gap-2 text-Tartiary text-sm">
-              <span>Message performer</span>
-              <span>View invitation history</span>
+              <button
+                class=" text-left hover:bg-BG-Secondary p-1 font-normal rounded-md text-sm text-Text-Tartiary hover:text-Text-Primary"
+                >Message performer</button
+              >
+              <button
+                class=" text-left hover:bg-BG-Secondary p-1 font-normal rounded-md text-sm text-Text-Tartiary hover:text-Text-Primary"
+                >View invitation history</button
+              >
             </div>
           </CustomPopover>
         </TableBodyCell>
