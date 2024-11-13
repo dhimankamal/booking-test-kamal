@@ -14,8 +14,9 @@
   import Input from "$lib/components/ui/Input/Input.svelte";
   import Button from "$lib/components/ui/Button/Button.svelte";
   import Filters from "./Filters.svelte";
-  import Badge from "$lib/components/ui/Badges/Badge.svelte";
-  import { PoitionsColor } from "$lib/utils/utils";
+  import CustomPopover from "$lib/components/ui/Popover/CustomPopover.svelte";
+  // import Badge from "$lib/components/ui/Badges/Badge.svelte";
+  // import { PoitionsColor } from "$lib/utils/utils";
 
   let items = [
     {
@@ -48,7 +49,7 @@
   ];
 </script>
 
-<section class=" space-y-6">
+<section class="space-y-6">
   <div class="flex justify-between items-center">
     <div class=" flex items-center">
       <img src={EyeIcon} alt="Before Icon here" class="mr-2" />
@@ -59,6 +60,7 @@
     <Input icon={SearchIcon} placeholder="Search" size="large" />
     <Button
       strokebtn={true}
+      data-popover-target={`popover-no-arrow-30`}
       beforeIcon={FilterIcon}
       className="!text-brand-Primary">Filter</Button
     >
@@ -112,4 +114,13 @@
   </Table>
 </section>
 
-<Filters />
+<!-- <button
+  class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"
+  data-popover-target={`popover-no-arrow-30`}
+>
+  <img src={MoreIcon} alt="more-actions" class="" />
+</button> -->
+
+<CustomPopover id={`popover-no-arrow-30`} class="w-96 flex">
+  <Filters />
+</CustomPopover>
