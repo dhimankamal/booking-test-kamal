@@ -66,57 +66,60 @@
       className="!text-brand-Primary">Filter</Button
     >
   </div>
-  <Table hoverable={true} {items}>
-    <TableHead class=" bg-BG-Secondary text-sm font-normal text-Text-Tartiary">
-      <TableHeadCell class="py-6 rounded-tl-lg capitalize font-normal"
-        >Performer</TableHeadCell
+  <div class=" hidden md:block">
+    <Table hoverable={true} {items}>
+      <TableHead
+        class=" bg-BG-Secondary text-sm font-normal text-Text-Tartiary"
       >
-      <TableHeadCell
-        class="font-normal"
-        sort={(a, b) => a.type.localeCompare(b.type)}>Ethnicity</TableHeadCell
-      >
-      <TableHeadCell
-        class="font-normal"
-        sort={(a, b) => a.make - b.make}
-        defaultDirection="desc">Position</TableHeadCell
-      >
-      <TableHeadCell
-        class="font-normal"
-        sort={(a, b) => a.make - b.make}
-        defaultDirection="desc">Last booked</TableHeadCell
-      >
-      <TableHeadCell class="rounded-tr-lg">
-        <span class="sr-only">Notes</span>
-      </TableHeadCell>
-    </TableHead>
-    <TableBody tableBodyClass=" border-BG-Secondary">
-      <TableBodyRow slot="row" let:item>
-        <TableBodyCell class=" max-w-48 font-normal">
-          <div class="flex items-center gap-4 w-full">
-            <img src={item.performer.image} alt="" />
-            <p class=" overflow-hidden whitespace-pre-wrap text-sm">
-              {item.performer.name}
-            </p>
-          </div>
-        </TableBodyCell>
+        <TableHeadCell class="py-6 rounded-tl-lg capitalize font-normal"
+          >Performer</TableHeadCell
+        >
+        <TableHeadCell
+          class="font-normal"
+          sort={(a, b) => a.type.localeCompare(b.type)}>Ethnicity</TableHeadCell
+        >
+        <TableHeadCell
+          class="font-normal"
+          sort={(a, b) => a.make - b.make}
+          defaultDirection="desc">Position</TableHeadCell
+        >
+        <TableHeadCell
+          class="font-normal"
+          sort={(a, b) => a.make - b.make}
+          defaultDirection="desc">Last booked</TableHeadCell
+        >
+        <TableHeadCell class="rounded-tr-lg">
+          <span class="sr-only">Notes</span>
+        </TableHeadCell>
+      </TableHead>
+      <TableBody tableBodyClass=" border-BG-Secondary">
+        <TableBodyRow slot="row" let:item>
+          <TableBodyCell class=" max-w-48 font-normal">
+            <div class="flex items-center gap-4 w-full">
+              <img src={item.performer.image} alt="" />
+              <p class=" overflow-hidden whitespace-pre-wrap text-sm">
+                {item.performer.name}
+              </p>
+            </div>
+          </TableBodyCell>
 
-        <TableBodyCell class="font-normal">{item.ethnicity}</TableBodyCell>
-        <TableBodyCell class="font-normal">Host</TableBodyCell>
-        <TableBodyCell class="!font-normal">{item.lastbooked}</TableBodyCell>
-        <TableBodyCell class=" flex items-end justify-end">
-          <button
-            class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"
-          >
-            <img src={MoreIcon} alt="more-actions" class="" />
-          </button>
-        </TableBodyCell>
-      </TableBodyRow>
-    </TableBody>
-  </Table>
+          <TableBodyCell class="font-normal">{item.ethnicity}</TableBodyCell>
+          <TableBodyCell class="font-normal">Host</TableBodyCell>
+          <TableBodyCell class="!font-normal">{item.lastbooked}</TableBodyCell>
+          <TableBodyCell class=" flex items-end justify-end">
+            <button
+              class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"
+            >
+              <img src={MoreIcon} alt="more-actions" class="" />
+            </button>
+          </TableBodyCell>
+        </TableBodyRow>
+      </TableBody>
+    </Table>
+  </div>
 </section>
 
-
-<CustomPopover id={`popover-no-arrow-30`} class="w-96 flex">
+<CustomPopover id={`popover-no-arrow-30`} class="w-screen md:w-96 flex">
   <Filters />
 </CustomPopover>
 

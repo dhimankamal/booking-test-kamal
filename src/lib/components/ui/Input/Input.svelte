@@ -112,7 +112,7 @@
       case "full":
         return "w-full";
       case "large":
-        return "w-96";
+        return "md:w-96";
       case "medium":
         return "w-64";
       case "small":

@@ -32,5 +32,6 @@ import Lineup from "$lib/components/pages/bookings/Lineup.svelte";
     <Pinned />
     <Declined />
     <Roster />
+   
   </Card>
 </div>

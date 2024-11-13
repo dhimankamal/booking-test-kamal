@@ -173,7 +173,7 @@
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
     class={classNames(
-      "cursor-pointer gap-1 capitalize w-28",
+      "cursor-pointer gap-1 capitalize w-24",
       "inline-flex items-center justify-center",
       sizeClass,
       className,
