@@ -45,9 +45,9 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies_vite: string;
 	export const HOMEBREW_REPOSITORY: string;
 	export const TMPDIR: string;
-	export const npm_package_scripts_studio: string;
 	export const npm_package_scripts_lint: string;
 	export const TERM_PROGRAM_VERSION: string;
+	export const npm_package_devDependencies_flowbite: string;
 	export const npm_package_scripts_dev: string;
 	export const npm_package_devDependencies_drizzle_kit: string;
 	export const MallocNanoZone: string;
@@ -57,7 +57,6 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies__sveltejs_kit: string;
 	export const npm_config_registry: string;
 	export const PNPM_HOME: string;
-	export const npm_package_scripts_generate: string;
 	export const npm_package_dependencies_phone: string;
 	export const npm_package_devDependencies_globals: string;
 	export const npm_package_dependencies_dayjs: string;
@@ -73,6 +72,7 @@ declare module '$env/static/private' {
 	export const npm_execpath: string;
 	export const npm_package_devDependencies_svelte: string;
 	export const npm_config_frozen_lockfile: string;
+	export const npm_package_dependencies_tailwind_merge: string;
 	export const PATH: string;
 	export const npm_package_devDependencies__sveltejs_adapter_node: string;
 	export const npm_package_devDependencies__neoconfetti_svelte: string;
@@ -88,13 +88,12 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies__sveltejs_vite_plugin_svelte: string;
 	export const NODE_PATH: string;
 	export const npm_package_scripts_build: string;
-	export const npm_package_scripts_start: string;
 	export const npm_package_devDependencies__types_pg: string;
 	export const XPC_FLAGS: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const npm_package_devDependencies__types_ws: string;
+	export const npm_package_devDependencies_flowbite_svelte: string;
 	export const npm_package_dependencies__kinde_oss_kinde_auth_sveltekit: string;
-	export const npm_package_scripts_migrate: string;
 	export const npm_package_devDependencies_eslint_config_prettier: string;
 	export const npm_config_node_gyp: string;
 	export const XPC_SERVICE_NAME: string;
@@ -181,9 +180,9 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies_vite: string;
 		HOMEBREW_REPOSITORY: string;
 		TMPDIR: string;
-		npm_package_scripts_studio: string;
 		npm_package_scripts_lint: string;
 		TERM_PROGRAM_VERSION: string;
+		npm_package_devDependencies_flowbite: string;
 		npm_package_scripts_dev: string;
 		npm_package_devDependencies_drizzle_kit: string;
 		MallocNanoZone: string;
@@ -193,7 +192,6 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies__sveltejs_kit: string;
 		npm_config_registry: string;
 		PNPM_HOME: string;
-		npm_package_scripts_generate: string;
 		npm_package_dependencies_phone: string;
 		npm_package_devDependencies_globals: string;
 		npm_package_dependencies_dayjs: string;
@@ -209,6 +207,7 @@ declare module '$env/dynamic/private' {
 		npm_execpath: string;
 		npm_package_devDependencies_svelte: string;
 		npm_config_frozen_lockfile: string;
+		npm_package_dependencies_tailwind_merge: string;
 		PATH: string;
 		npm_package_devDependencies__sveltejs_adapter_node: string;
 		npm_package_devDependencies__neoconfetti_svelte: string;
@@ -224,13 +223,12 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies__sveltejs_vite_plugin_svelte: string;
 		NODE_PATH: string;
 		npm_package_scripts_build: string;
-		npm_package_scripts_start: string;
 		npm_package_devDependencies__types_pg: string;
 		XPC_FLAGS: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		npm_package_devDependencies__types_ws: string;
+		npm_package_devDependencies_flowbite_svelte: string;
 		npm_package_dependencies__kinde_oss_kinde_auth_sveltekit: string;
-		npm_package_scripts_migrate: string;
 		npm_package_devDependencies_eslint_config_prettier: string;
 		npm_config_node_gyp: string;
 		XPC_SERVICE_NAME: string;
