@@ -1,6 +1,9 @@
 <script>
-  import Table from "$lib/components/pages/bookings/Table.svelte";
-import Breadcrumb from "$lib/components/ui/Breadcrumb.svelte";
+  import Declined from "$lib/components/pages/bookings/Declined.svelte";
+import Lineup from "$lib/components/pages/bookings/Lineup.svelte";
+  import Pinned from "$lib/components/pages/bookings/Pinned.svelte";
+  import Breadcrumb from "$lib/components/ui/Breadcrumb.svelte";
+  import Card from "$lib/components/ui/Card.svelte";
   import { writable } from "svelte/store";
 
   let BreadcrumbRoutes = writable([
@@ -20,12 +23,12 @@ import Breadcrumb from "$lib/components/ui/Breadcrumb.svelte";
   <title>Booking test by kamal</title>
 </svelte:head>
 
-<Breadcrumb data={$BreadcrumbRoutes} on:click={handleBreadcrumbClick} />
-<section class="w-full space-y-6">
-  <h2>Booking</h2>
-  <div class="flex justify-between">
-    <h3>lineup</h3>
-    <button>action</button>
-  </div>
-  <Table />
-</section>
+<div class="p-4 bg-BG-Secondary space-y-4">
+  <Breadcrumb data={$BreadcrumbRoutes} on:click={handleBreadcrumbClick} />
+  <Card>
+    <h2 class=" text-xl">Booking</h2>
+    <Lineup />
+    <Pinned />
+    <Declined />
+  </Card>
+</div>

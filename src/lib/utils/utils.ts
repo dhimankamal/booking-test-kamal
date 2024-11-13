@@ -33,11 +33,9 @@ export function convertToCustomDateFormat(isoString) {
   return customDate;
 }
 
-
 export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
-
 
 export function getDays(params) {
   if (params === "weeks") {
@@ -112,7 +110,7 @@ export const ROLE_PERMISSION_LIST = [
       "Edit performer profiles",
       "Send booking invitations",
       "Manually confirm/decline performers to spots",
-      "Send avails requests"
+      "Send avails requests",
     ],
   },
   {
@@ -166,28 +164,20 @@ export const ROLE_PERMISSION_LIST = [
     title: "Contacts",
     description:
       "Keep our users in the loop, select which emails you would like them to receive",
-    checkbox: [
-      "Select all",
-      "Email attendees",
-      "Email/SMS performers",
-    ],
+    checkbox: ["Select all", "Email attendees", "Email/SMS performers"],
   },
   {
     icon: ReportingIcon,
     title: "Reporting",
     description:
       "Allow users to access, filter & export data across your organization",
-    checkbox: [
-      "Access reports pages",
-    ],
+    checkbox: ["Access reports pages"],
   },
   {
     icon: PayoutIcon,
     title: "Payouts & billing",
     description:
       "Users can configure payout methods, manage event payment options & track financials with reporting",
-    checkbox: [
-      "Manage financial accounts (Stripe)"
-    ],
+    checkbox: ["Manage financial accounts (Stripe)"],
   },
 ];
