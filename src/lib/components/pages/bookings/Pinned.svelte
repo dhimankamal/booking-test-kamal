@@ -25,6 +25,7 @@
       },
       status: "pinned",
       position: "HOST",
+      icon:Statuspinned,
       set: "10",
       note: "Can I go up early?",
       id: 1,
