@@ -3,6 +3,7 @@
   import SearchIcon from "$lib/assets/svg/search.svg";
   import FilterIcon from "$lib/assets/svg/filter-btn.svg";
   import {
+  Badge,
     Table,
     TableBody,
     TableBodyCell,
@@ -15,6 +16,7 @@
   import Button from "$lib/components/ui/Button/Button.svelte";
   import Filters from "./Filters.svelte";
   import CustomPopover from "$lib/components/ui/Popover/CustomPopover.svelte";
+  import { PoitionsColor } from "$lib/utils/utils";
   // import Badge from "$lib/components/ui/Badges/Badge.svelte";
   // import { PoitionsColor } from "$lib/utils/utils";
 
@@ -104,7 +106,11 @@
           </TableBodyCell>
 
           <TableBodyCell class="font-normal">{item.ethnicity}</TableBodyCell>
-          <TableBodyCell class="font-normal">Host</TableBodyCell>
+          <TableBodyCell class="font-normal"><Badge
+            size="large"
+            bgColor={PoitionsColor['HOST'].bgColor}
+            textColor="#FFFFFF">{'HOST'}</Badge
+          >  </TableBodyCell>
           <TableBodyCell class="!font-normal">{item.lastbooked}</TableBodyCell>
           <TableBodyCell class=" flex items-end justify-end">
             <button
