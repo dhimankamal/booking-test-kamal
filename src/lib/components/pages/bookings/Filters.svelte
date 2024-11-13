@@ -21,7 +21,7 @@
   </div>
   <div>
     <div>
-      <Select id="select-underline" underline class="mt-2" items={countries} />
+      <Select class="mt-2" items={countries} />
     </div>
   </div>
 </section>

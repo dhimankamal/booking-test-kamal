@@ -1,5 +1,4 @@
 <script>
-
   import DeclinedIcon from "$lib/assets/svg/declined.svg";
   import {
     Table,
@@ -11,6 +10,7 @@
   } from "flowbite-svelte";
   import MoreIcon from "$lib/assets/svg/more-actions.svg";
   import Badge from "$lib/components/ui/Badges/Badge.svelte";
+  import CustomPopover from "$lib/components/ui/Popover/CustomPopover.svelte";
 
   let items = [
     {
@@ -33,9 +33,6 @@
       <img src={DeclinedIcon} alt="Before Icon here" class="mr-2" />
       <h3 class="text-2xl text-Text-Tartiary">Declined</h3>
     </div>
-
-    
-   
   </div>
 
   <Table hoverable={true} {items}>
@@ -90,9 +87,17 @@
         <TableBodyCell class=" flex items-end justify-end">
           <button
             class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"
+            data-popover-target={`popover-no-arrow-${item.id}`}
           >
             <img src={MoreIcon} alt="more-actions" class="" />
           </button>
+
+          <CustomPopover id={`popover-no-arrow-${item.id}`}>
+            <div class="flex flex-col gap-2 text-Tartiary text-sm">
+              <span>Message performer</span>
+              <span>View invitation history</span>
+            </div>
+          </CustomPopover>
         </TableBodyCell>
       </TableBodyRow>
     </TableBody>
