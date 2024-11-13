@@ -2,7 +2,7 @@
   import { Dropdown, DropdownItem } from "flowbite-svelte";
   import Button from "$lib/components/ui/Button/Button.svelte";
   import DropdownIcon from "$lib/assets/svg/chevron-down.svg";
-  import PinnedIcon from "$lib/assets/svg/pinned.svg";
+  import EyeIcon from "$lib/assets/svg/eye.svg";
   import {
     Table,
     TableBody,
@@ -32,7 +32,7 @@
 <section class=" space-y-6">
   <div class="flex justify-between items-center">
     <div class=" flex items-center">
-      <img src={PinnedIcon} alt="Before Icon here" class="mr-2" />
+      <img src={EyeIcon} alt="Before Icon here" class="mr-2" />
       <h3 class="text-2xl text-Text-Tartiary">Roster</h3>
     </div>
 
@@ -54,7 +54,7 @@
       >
       <TableHeadCell
         class="font-normal"
-        sort={(a, b) => a.type.localeCompare(b.type)}>Status</TableHeadCell
+        sort={(a, b) => a.type.localeCompare(b.type)}>Ethnicity</TableHeadCell
       >
       <TableHeadCell
         class="font-normal"
@@ -64,12 +64,7 @@
       <TableHeadCell
         class="font-normal"
         sort={(a, b) => a.make - b.make}
-        defaultDirection="desc">Set</TableHeadCell
-      >
-      <TableHeadCell
-        class="font-normal"
-        sort={(a, b) => a.make - b.make}
-        defaultDirection="desc">Notes</TableHeadCell
+        defaultDirection="desc">Last booked</TableHeadCell
       >
       <TableHeadCell class="rounded-tr-lg">
         <span class="sr-only">Notes</span>
@@ -79,17 +74,13 @@
       <TableBodyRow slot="row" let:item>
         <TableBodyCell class=" max-w-48">
           <div class="flex items-center gap-4 w-full">
-            <span class="text-Text-Tartiary">::</span>
             <img src={item.performer.image} alt="" />
             <p class=" overflow-hidden whitespace-pre-wrap text-sm">
               {item.performer.name}
             </p>
           </div>
         </TableBodyCell>
-        <TableBodyCell
-          ><Badge size="medium" status="success">{item.status}</Badge
-          ></TableBodyCell
-        >
+
         <TableBodyCell
           ><Badge size="large" status="success">{item.position}</Badge
           ></TableBodyCell

@@ -2,6 +2,7 @@
   import Declined from "$lib/components/pages/bookings/Declined.svelte";
 import Lineup from "$lib/components/pages/bookings/Lineup.svelte";
   import Pinned from "$lib/components/pages/bookings/Pinned.svelte";
+  import Roster from "$lib/components/pages/bookings/Roster.svelte";
   import Breadcrumb from "$lib/components/ui/Breadcrumb.svelte";
   import Card from "$lib/components/ui/Card.svelte";
   import { writable } from "svelte/store";
@@ -30,5 +31,6 @@ import Lineup from "$lib/components/pages/bookings/Lineup.svelte";
     <Lineup />
     <Pinned />
     <Declined />
+    <Roster />
   </Card>
 </div>
