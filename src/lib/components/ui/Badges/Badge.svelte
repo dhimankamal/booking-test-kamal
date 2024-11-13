@@ -183,7 +183,7 @@
     on:click={(event) => dispatch("click", event)}
   >
     {#if icon}
-      <img src={icon} alt="Badge Icon here" />
+      <img src={icon} alt="Badge Icon here" class="w-3" />
     {/if}
     {#if dismissable}
       <button class="dismiss-button" on:click={handleDismiss}>

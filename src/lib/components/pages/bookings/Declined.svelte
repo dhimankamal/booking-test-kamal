@@ -21,9 +21,9 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",
+      status: "declined",
       position: "HOST",
-      icon: ConfirmIcon,
+      icon: DeclinedIcon,
       set: "10",
       note: "Can I go up early?",
       id: 1,
@@ -33,10 +33,10 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",
+      status: "declined",
       position: "HOST",
       set: "10",
-      icon: ConfirmIcon,
+      icon: DeclinedIcon,
       note: "Can I go up early?",
       id: 2,
     },
@@ -94,7 +94,7 @@
             </div>
           </TableBodyCell>
           <TableBodyCell
-            ><Badge size="medium" icon={ConfirmIcon} status={item.status}
+            ><Badge size="medium" icon={DeclinedIcon} status={item.status}
               >{item.status}</Badge
             ></TableBodyCell
           >
