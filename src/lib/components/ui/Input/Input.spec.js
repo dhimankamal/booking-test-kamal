@@ -31,7 +31,7 @@ describe("Input Component Tests", () => {
     await user.type(input, "invalid-email");
     await fireEvent.blur(input);
     expect(
-      screen.getByText("Please provide a correct Email")
+      screen.getByText("Please provide a correct Email"),
     ).toBeInTheDocument();
   });
 
@@ -45,7 +45,7 @@ describe("Input Component Tests", () => {
     await user.type(input, "test@example.com");
     await fireEvent.blur(input);
     expect(
-      screen.queryByText("Please provide a correct Email")
+      screen.queryByText("Please provide a correct Email"),
     ).not.toBeInTheDocument();
   });
 
@@ -157,7 +157,7 @@ describe("Input Component Tests", () => {
       placeholder: "Textarea Placeholder",
     });
     expect(
-      screen.getByPlaceholderText("Textarea Placeholder")
+      screen.getByPlaceholderText("Textarea Placeholder"),
     ).toBeInTheDocument();
   });
 

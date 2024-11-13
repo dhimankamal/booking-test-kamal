@@ -13,6 +13,11 @@
   } from "flowbite-svelte";
   import MoreIcon from "$lib/assets/svg/more-actions.svg";
   import Badge from "$lib/components/ui/Badges/Badge.svelte";
+  import { PoitionsColor } from "$lib/utils/utils";
+  import InvitedIcon from "$lib/assets/icons/invited.svg";
+  import Confirmed from "$lib/assets/icons/confirm.svg";
+
+
 
   let items = [
     {
@@ -20,7 +25,7 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",
+      status: "confirmed",icon: Confirmed,
       position: "HOST",
       set: "10",
       note: "Can I go up early?",
@@ -31,7 +36,8 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",
+      icon: InvitedIcon,
+      status:"invited",
       position: "HOST",
       set: "10",
       note: "Can I go up early?",
@@ -42,8 +48,8 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",
-      position: "HOST",
+      status: "confirmed",icon: Confirmed,
+      position: "HEADLINER",
       set: "10",
       note: "Can I go up early?",
       id: 3,
@@ -53,8 +59,8 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",
-      position: "HOST",
+      status: "confirmed",icon: Confirmed,
+      position: "GUEST",
       set: "10",
       note: "Can I go up early?",
       id: 4,
@@ -64,8 +70,8 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",
-      position: "HOST",
+      status: "confirmed",icon: Confirmed,
+      position: "FEATURE",
       set: "10",
       note: "Can I go up early?",
       id: 5,
@@ -131,11 +137,11 @@
           </div>
         </TableBodyCell>
         <TableBodyCell
-          ><Badge size="medium" status="success">{item.status}</Badge
+          ><Badge size="medium" icon={item.icon}  status={item.status}>{item.status}</Badge
           ></TableBodyCell
         >
         <TableBodyCell
-          ><Badge size="large" status="success">{item.position}</Badge
+          ><Badge size="large" bgColor={PoitionsColor[item.position].bgColor} textColor="#FFFFFF">{item.position}</Badge
           ></TableBodyCell
         >
         <TableBodyCell>{item.set}</TableBodyCell>

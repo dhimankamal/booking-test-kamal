@@ -181,3 +181,22 @@ export const ROLE_PERMISSION_LIST = [
     checkbox: ["Manage financial accounts (Stripe)"],
   },
 ];
+
+export const PoitionsColor = {
+  HOST: {
+    bgColor: "#ADB0B7",
+    textColor: "#FFFFFF",
+  },
+  GUEST: {
+    bgColor: "#00AC87",
+    textColor: "#FFFFFF",
+  },
+  FEATURE: {
+    bgColor: "#38A0FF",
+    textColor: "#FFFFFF",
+  },
+  HEADLINER: {
+    bgColor: "#FF6666",
+    textColor: "#FFFFFF",
+  },
+};

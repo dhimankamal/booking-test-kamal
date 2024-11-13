@@ -26,7 +26,7 @@
       case "small":
         return "px-[2px] text-[7px] leading-[7px] rounded-[4px] font-medium";
       case "medium":
-        return "px-[8.5px] py-[2px] text-[10px] leading-[14px] font-semibold rounded-[6px]";
+        return "px-2 py-1 text-[10px] leading-[14px] font-semibold rounded-[6px]";
       case "large":
         return "px-[15.5px] py-[6px] text-sm leading-[14px] font-medium rounded-[6px]";
       default:
@@ -37,21 +37,30 @@
   const statusStyles = (() => {
     switch (status) {
       case "success":
+      case "confirmed":
         return {
           textColor: "#15A033",
           bgColor: "rgba(21, 160, 51, 0.15)",
           statusClass: "success-class",
         };
       case "warning":
+      case "pinned":
         return {
           textColor: "rgba(255, 146, 46, 1)",
           bgColor: "rgba(255, 146, 46, 0.15)",
           statusClass: "warning-class",
         };
       case "danger":
+      case "declined":
         return {
           textColor: "rgba(255, 102, 102, 1)",
           bgColor: "rgba(255, 102, 102, 0.15)",
+          statusClass: "danger-class",
+        };
+      case "invited":
+        return {
+          textColor: "rgba(102, 108, 121, 1)",
+          bgColor: "rgba(239, 239, 241, 1)",
           statusClass: "danger-class",
         };
       default:
@@ -164,8 +173,8 @@
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
     class={classNames(
-      "cursor-pointer gap-1",
-      "inline-flex items-center",
+      "cursor-pointer gap-1 capitalize w-28",
+      "inline-flex items-center justify-center",
       sizeClass,
       className,
       finalClass

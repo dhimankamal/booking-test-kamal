@@ -14,6 +14,8 @@
   import Input from "$lib/components/ui/Input/Input.svelte";
   import Button from "$lib/components/ui/Button/Button.svelte";
   import Filters from "./Filters.svelte";
+  import Badge from "$lib/components/ui/Badges/Badge.svelte";
+  import { PoitionsColor } from "$lib/utils/utils";
 
   let items = [
     {

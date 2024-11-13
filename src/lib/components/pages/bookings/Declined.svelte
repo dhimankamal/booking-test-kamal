@@ -1,5 +1,6 @@
 <script>
   import DeclinedIcon from "$lib/assets/svg/declined.svg";
+  import StatusDeclined from "$lib/assets/icons/declined.svg";
   import {
     Table,
     TableBody,
@@ -11,6 +12,7 @@
   import MoreIcon from "$lib/assets/svg/more-actions.svg";
   import Badge from "$lib/components/ui/Badges/Badge.svelte";
   import CustomPopover from "$lib/components/ui/Popover/CustomPopover.svelte";
+  import { PoitionsColor } from "$lib/utils/utils";
 
   let items = [
     {
@@ -18,7 +20,7 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",
+      status: "declined",
       position: "HOST",
       set: "10",
       note: "Can I go up early?",
@@ -75,11 +77,11 @@
           </div>
         </TableBodyCell>
         <TableBodyCell
-          ><Badge size="medium" status="success">{item.status}</Badge
+          ><Badge size="medium" icon={StatusDeclined} status={item.status}>{item.status}</Badge
           ></TableBodyCell
         >
         <TableBodyCell
-          ><Badge size="large" status="success">{item.position}</Badge
+          ><Badge size="large" bgColor={PoitionsColor[item.position].bgColor} textColor="#FFFFFF">{item.position}</Badge
           ></TableBodyCell
         >
         <TableBodyCell>{item.set}</TableBodyCell>

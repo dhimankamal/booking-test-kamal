@@ -3,6 +3,7 @@
   import Button from "$lib/components/ui/Button/Button.svelte";
   import DropdownIcon from "$lib/assets/svg/chevron-down.svg";
   import PinnedIcon from "$lib/assets/svg/pinned.svg";
+  import Statuspinned from "$lib/assets/icons/pinned.svg";
   import {
     Table,
     TableBody,
@@ -13,6 +14,7 @@
   } from "flowbite-svelte";
   import MoreIcon from "$lib/assets/svg/more-actions.svg";
   import Badge from "$lib/components/ui/Badges/Badge.svelte";
+  import { PoitionsColor } from "$lib/utils/utils";
 
   let items = [
     {
@@ -20,7 +22,7 @@
         image: "/images/avatar.png",
         name: "Dana Gould",
       },
-      status: "confirmed",
+      status: "pinned",
       position: "HOST",
       set: "10",
       note: "Can I go up early?",
@@ -87,11 +89,11 @@
           </div>
         </TableBodyCell>
         <TableBodyCell
-          ><Badge size="medium" status="success">{item.status}</Badge
+          ><Badge size="medium" icon={Statuspinned} status={item.status}>{item.status}</Badge
           ></TableBodyCell
         >
         <TableBodyCell
-          ><Badge size="large" status="success">{item.position}</Badge
+          ><Badge size="large" bgColor={PoitionsColor[item.position].bgColor} textColor="#FFFFFF">{item.position}</Badge
           ></TableBodyCell
         >
         <TableBodyCell>{item.set}</TableBodyCell>
