@@ -13,6 +13,7 @@
   import MoreIcon from "$lib/assets/svg/more-actions.svg";
   import Input from "$lib/components/ui/Input/Input.svelte";
   import Button from "$lib/components/ui/Button/Button.svelte";
+  import Filters from "./Filters.svelte";
 
   let items = [
     {
@@ -108,3 +109,5 @@
     </TableBody>
   </Table>
 </section>
+
+<Filters />
