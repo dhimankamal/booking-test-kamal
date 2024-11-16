@@ -25,6 +25,7 @@
   export let value = ""; 
 
   $: value = inputValue;
+  
   let inputValue = value;
   let touched = false;
   let displayErrorText = "";

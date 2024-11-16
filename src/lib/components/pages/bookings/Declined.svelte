@@ -1,6 +1,5 @@
 <script>
   import DeclinedIcon from "$lib/assets/svg/declined.svg";
-  import ConfirmIcon from "$lib/assets/icons/confirm.svg";
   import {
     Table,
     TableBody,

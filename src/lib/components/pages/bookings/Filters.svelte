@@ -20,8 +20,7 @@
     <h3 class="text-sm font-medium">Availability</h3>
     <div class="flex gap-2 items-center">
       <Checkbox />
-      <label for="checkbox" class="text-sm text-Text-Secondary"
-        >Available</label
+      <label for="checkbox" class="text-sm text-Text-Secondary">Available</label
       >
     </div>
   </div>

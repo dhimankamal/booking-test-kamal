@@ -8,7 +8,7 @@
 <div class="py-4 border-b border-stroke-Primary">
   <div class="flex items-center gap-4 w-full">
     <span class="text-Text-Tartiary">::</span>
-    <img src={data?.performer?.image} alt="" />
+    <img src={data?.performer?.image || '-'} alt="" />
     <div class="w-full space-y-2">
       <div class="flex justify-between w-full gap-2 overflow-hidden">
         <p class=" text-sm font-normal overflow-hidden h-5">

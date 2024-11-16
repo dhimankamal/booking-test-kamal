@@ -1,6 +1,6 @@
 <script>
   import Declined from "$lib/components/pages/bookings/Declined.svelte";
-import Lineup from "$lib/components/pages/bookings/Lineup.svelte";
+  import Lineup from "$lib/components/pages/bookings/Lineup.svelte";
   import Pinned from "$lib/components/pages/bookings/Pinned.svelte";
   import Roster from "$lib/components/pages/bookings/Roster.svelte";
   import Breadcrumb from "$lib/components/ui/Breadcrumb.svelte";
@@ -16,7 +16,6 @@ import Lineup from "$lib/components/pages/bookings/Lineup.svelte";
 
   function handleBreadcrumbClick() {
     selectedEvent.set(null);
-    // BreadcrumbRoutes.set([{ name: "Home", href: "/" }]);
   }
 </script>
 
@@ -32,6 +31,5 @@ import Lineup from "$lib/components/pages/bookings/Lineup.svelte";
     <Pinned />
     <Declined />
     <Roster />
-   
   </Card>
 </div>

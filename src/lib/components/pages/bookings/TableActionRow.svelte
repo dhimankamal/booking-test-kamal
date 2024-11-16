@@ -10,9 +10,11 @@
   <div class="flex items-center gap-4 w-full">
     <span class="text-Text-Tartiary invisible">::</span>
     <img src={Profile} alt="hello" />
-    <Button strokebtn={true} beforeIcon={PlusIcon} className="!text-brand-Primary"
-    >Add</Button
-  >
+    <Button
+      strokebtn={true}
+      beforeIcon={PlusIcon}
+      className="!text-brand-Primary">Add</Button
+    >
   </div>
 </TableBodyCell>
 <TableBodyCell class="border-y border-BG-Tartiary"></TableBodyCell>
@@ -23,5 +25,4 @@
   <button class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg">
     <img src={MoreIcon} alt="more-actions" class="" />
   </button>
-
 </TableBodyCell>

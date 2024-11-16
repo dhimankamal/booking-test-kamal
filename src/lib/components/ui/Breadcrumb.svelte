@@ -1,13 +1,18 @@
-<script>
+<script lang="ts">
   import { createEventDispatcher } from "svelte";
   import BreadcrumbArrow from "$lib/assets/svg/arrow-up.svg";
   import BreadcrumbHome from "$lib//assets/svg/home.svg";
 
-  export let data = [];
+  interface Breadcrumb {
+    name: string;
+    href?: string; // href is optional
+  }
 
-  const dispatch = createEventDispatcher();
+  export let data: Breadcrumb[] = [];
 
-  function handleClick(crumb) {
+  const dispatch = createEventDispatcher<{ click: Breadcrumb }>();
+
+  function handleClick(crumb: Breadcrumb) {
     dispatch("click", crumb);
   }
 </script>
