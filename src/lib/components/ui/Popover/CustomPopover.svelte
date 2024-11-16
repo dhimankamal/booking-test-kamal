@@ -16,7 +16,7 @@
   triggeredBy={`#${triggeredById}`}
   {trigger}
   {border}
-  defaultClass="text-sm rounded-lg px-3 py-4  border border-[#D4D6D9] shadow-sm {$$restProps.class}"
+  defaultClass="text-sm rounded-lg px-3 py-4  border border-stroke-Primary shadow-sm {$$restProps.class}"
 >
   <slot />
 </Popover>
