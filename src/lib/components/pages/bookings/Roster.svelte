@@ -17,6 +17,8 @@
   import Filters from "./Filters.svelte";
   import CustomPopover from "$lib/components/ui/Popover/CustomPopover.svelte";
   import { PoitionsColor } from "$lib/utils/utils";
+  // import Badge from "$lib/components/ui/Badges/Badge.svelte";
+  // import { PoitionsColor } from "$lib/utils/utils";
 
   let items = [
     {
@@ -60,9 +62,8 @@
     <Input icon={SearchIcon} placeholder="Search" size="large" />
     <Button
       strokebtn={true}
-      data-popover-target={`popover-no-arrow-30`}
+      id={`popover-no-arrow-30`}
       beforeIcon={FilterIcon}
-      data-popover-placement="bottom"
       className="!text-brand-Primary">Filter</Button
     >
   </div>
@@ -123,10 +124,14 @@
       </TableBody>
     </Table>
   </div>
+  <CustomPopover
+    trigger="click"
+    triggeredById={`popover-no-arrow-30`}
+    class="w-screen md:w-96 flex "
+    placement="bottom"
+  >
+    <Filters />
+  </CustomPopover>
 </section>
-
-<CustomPopover id={`popover-no-arrow-30`} class="w-screen md:w-96 flex">
-  <Filters />
-</CustomPopover>
 
 <div class="h-96"></div>

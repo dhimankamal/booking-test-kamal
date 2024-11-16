@@ -169,14 +169,16 @@
           <TableBodyCell class=" flex items-end justify-end">
             <button
               class=" grid place-content-center p-2 bg-BG-Secondary rounded-lg"
-              data-popover-target={`popover-no-arrow-${item.id}`}
-              data-popover-placement="right"
-              data-popover-trigger="click"
+              id={`popover-no-arrow-${item.id}`}
             >
               <img src={MoreIcon} alt="more-actions" class="" />
             </button>
 
-            <CustomPopover id={`popover-no-arrow-${item.id}`}>
+            <CustomPopover
+              triggeredById={`popover-no-arrow-${item.id}`}
+              placement="left"
+              trigger="click"
+            >
               <div class="flex flex-col gap-2 text-Tartiary text-sm">
                 <button
                   class=" text-left hover:bg-BG-Secondary p-1 font-normal rounded-md text-sm text-Text-Tartiary hover:text-Text-Primary"

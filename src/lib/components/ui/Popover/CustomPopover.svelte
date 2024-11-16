@@ -1,26 +1,23 @@
+
 <script>
-  import { onMount } from "svelte";
+  // @ts-nocheck
   import { Popover } from "flowbite-svelte";
 
-  export let id = "";
-
-  onMount(() => {
-    document.querySelectorAll("[data-popover-target]").forEach(button => {
-      const targetId = button.getAttribute("data-popover-target");
-      const popoverEl = document.getElementById(targetId);
-
-      if (popoverEl) {
-        new Popover(popoverEl);
-      }
-    });
-  });
+  export let triggeredById = "";
+  export let placement = "top";
+  export let trigger = "hover";
+  export let border = false;
+  export let arrow = false;
 </script>
 
-<div
-  data-popover
-  {id}
-  role="tooltip"
-  class="absolute z-10 invisible flex text-sm text-gray-500 transition-opacity duration-300 bg-white border border-[#D4D6D9] px-3 py-4 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 {$$restProps.class}"
+<Popover
+  {arrow}
+  {placement}
+  triggeredBy={`#${triggeredById}`}
+  {trigger}
+  {border}
+  defaultClass="text-sm rounded-lg px-3 py-4  border border-[#D4D6D9] shadow-sm {$$restProps.class}"
 >
   <slot />
-</div>
+</Popover>
+
